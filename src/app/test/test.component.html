@@ -1,3 +1,15 @@
+<aside class="timer">
+  Time left:
+  <b>
+    <mat-progress-spinner
+      [value]="100 * (timer / INIT_TIMER_VALUE)"
+      class="spinner"
+      mode="determinate">
+    </mat-progress-spinner>
+    {{timer}}
+  </b>
+</aside>
+
 <mat-stepper linear #stepper class="bordererd stepper">
   <mat-step *ngFor="let control of form.controls; index as i" [stepControl]="control">
     <ng-container *ngIf="questions[i] as question">

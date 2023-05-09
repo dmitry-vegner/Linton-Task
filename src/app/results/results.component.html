@@ -1,5 +1,9 @@
 <main class="bordererd container">
   <h1 class="title">
+    <ng-container *ngIf="isTimeWentOut">
+      Your time went out. But it seems that...
+      <br>
+    </ng-container>
     You are an <span class="text-success">{{testResult}}</span>
   </h1>
   <button
