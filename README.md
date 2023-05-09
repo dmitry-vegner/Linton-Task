@@ -1,27 +1,24 @@
-# Quiz
+# Angular Developer Assignment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+## Description
 
-## Development server
+Build a simple quiz application that takes 3 different questions about personality, maps them into a score and produces a personality trait of either Introvert or Extrovert.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+You don’t need to use any BackEnd API. You can use the “questions.json” file.
+- You can find examples of questions in the attached “questions.json” file to this email.
+- You can find examples of screens as attached images to this email.
 
-## Code scaffolding
+## Requirements
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 3 Pages:
+  - landing page to start quiz
+  - questions page
+  - results page
+- Application should be done by lazy loading and RxJS.
+- For styling you can use any css library like Angular Material or Bootstrap, or custom css, whatever you prefer.
 
-## Build
+## Contacts
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+_Feel free to add any idea, implementation, approach to this quiz application which will highlight your technical skills in Angular._
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+_Please, push the code to your Github account and send the link to this email: [info@linton.ge](info@linton.ge)._
