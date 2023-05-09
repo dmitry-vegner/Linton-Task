@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button'; 
+import { MatButtonModule } from '@angular/material/button';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +27,9 @@ import { ResultsComponent } from './results/results.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatStepperModule,
+    MatRadioModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

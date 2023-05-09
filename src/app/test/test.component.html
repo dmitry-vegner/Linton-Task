@@ -1,0 +1,23 @@
+<mat-stepper linear #stepper class="bordererd stepper">
+  <mat-step *ngFor="let control of form.controls; index as i" [stepControl]="control">
+    <ng-container *ngIf="questions[i] as question">
+      <label class="text-bold" width="100%">{{question.title}}</label>
+      <mat-radio-group [formControl]="control">
+        <mat-radio-button
+          *ngFor="let answer of question.answers"
+          [value]="answer.value"
+          width="100%">
+          {{answer.title}}
+        </mat-radio-button>
+      </mat-radio-group>
+    </ng-container>
+    <div>
+      <button
+        (click)="goToResults(i)"
+        mat-button
+        matStepperNext>
+        Next
+      </button>
+    </div>
+  </mat-step>
+</mat-stepper>
