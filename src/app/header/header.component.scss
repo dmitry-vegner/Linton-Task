@@ -11,6 +11,22 @@
   font-size: 16px;
 }
 
+.link {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: #ddd;
+  }
+
+  &:active {
+    text-decoration: underline;
+    color: #bbb;
+  }
+}
+
 .menu {
   width: 100%;
 
