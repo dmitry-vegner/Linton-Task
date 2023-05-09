@@ -2,23 +2,24 @@
   font-size: 16px;
   margin-top: 50px;
   text-align: center;
-  position: relative;
+  display: flex;
+  flex-direction: column;
 
   b {
-    margin-left: 5px;
+    margin-top: -25px;
   }
 
   .spinner {
-    position: absolute;
-    top: -5px;
-    left: 760px;
+    margin: auto;
     width: 30px !important;
     height: 30px !important;
   }
 }
 
 .stepper {
-  margin: 10px 200px 0;
+  margin: 10px auto 0;
+  min-width: 420px;
+  width: 70%;
 }
 
 .text-bold {
