@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { tap } from 'rxjs';
 
 import { Question, questions } from './questions-interface';
-import { ResultsService } from '../results.service';
 
 @Component({
   selector: 'app-test',
@@ -17,26 +16,20 @@ export class TestComponent implements OnInit {
   form: FormArray;
   private result: number = 0;
 
-  constructor(
-    private router: Router,
-    private resultsService: ResultsService) {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     const answerValues = questions.map(({answers}) => answers.at(0)?.value ?? -2);
     this.calcResult(answerValues);
-    this.resultsService.setResult(this.result);
 
     this.form = new FormArray(answerValues.map(value => new FormControl(value)));
     this.form.valueChanges.pipe(tap((values: number[]) => this.calcResult(values))).subscribe();
   }
 
   goToResults(step: number): void {
-    if (step !== this.questions.length - 1) {
-      return;
+    if (step === this.questions.length - 1) {
+      this.router.navigate(['/results'], {state: {result: this.result}});
     }
-
-    this.resultsService.setResult(this.result);
-    this.router.navigate(['/results']);
   }
 
   private calcResult(answerValues: number[]): void {
